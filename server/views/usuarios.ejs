@@ -1,0 +1,19 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<% if (locals.usuarios) { %>
+<ul>
+  <% for (let usuario of usuarios) { %>
+    <li>
+      <h3>#<%= usuario.id %> <%= usuario.nome %></h3>
+    </li>
+  <% } %>
+</ul>
+<% } else { %>
+  <h2>DEU RUIM! TEM USUÁRIO NÃO!</h2>
+<% } %>
+
+<%- include('partials/footer') %>
